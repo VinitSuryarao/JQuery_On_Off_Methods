@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title> JQuery Test  </title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type = "text/javascript">
+
+		    // ready func call when document is ready to render
+         $(document).ready(function() 
+         {     
+              // Add Events in One Function
+               $('#bdy').on({
+
+                  "click": function(){
+                     $('#bdy').css('background','yellow')                  
+                  },
+
+                  "mouseover": function(){
+                     $('#bdy').css('background','orange')   
+                  },
+
+                  "mouseout": function(){
+                     $('#bdy').css('background','pink')   
+                  }
+               })
+               
+               // Remove All Events
+               $('#btnClick').click(function(){
+                  $('#bdy').off("mouseover mouseout");
+               });
+         });
+     </script>
+<head>
+   <body>
+   <div id="bdy">
+      <h1> JQuery Information</h1>
+      <p>jQuery is a JavaScript library designed to simplify HTML DOM</p>
+   </div>
+   <input type="button" id="btnClick" value="Remove Event">
+</body>
+</html>
